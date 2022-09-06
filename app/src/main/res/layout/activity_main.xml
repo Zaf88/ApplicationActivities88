@@ -7,16 +7,43 @@
     tools:context=".MainActivity"
     android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/phoneNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-    </EditText>
+
+    <TextView
+        android:id="@+id/tvphoneNumber"
+        android:layout_width="42dp"
+        android:layout_height="26dp"
+        android:layerType="hardware"
+        android:lineSpacingExtra="14sp"
+        android:text="+7"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editNumber"
+        app:layout_constraintEnd_toStartOf="@+id/editNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editNumber"/>
+
+    <EditText
+        android:id="@+id/editNumber"
+        android:layout_width="207dp"
+        android:layout_height="55dp"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:hint="*** *** ** **"
+        android:inputType="phone"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/action_call_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvInfoToUser"
+         />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/action_call_button"
@@ -25,17 +52,25 @@
         android:padding="10dp"
         android:text="Action Call"
         android:textSize="16sp"
-        tools:ignore="MissingConstraints" />
-
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="128dp" />
 
     <TextView
-        android:id="@+id/tvHello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/tvInfoToUser"
+        android:layout_width="354dp"
+        android:layout_height="33dp"
+        android:layerType="hardware"
+        android:lineSpacingExtra="14sp"
+        android:text="need calling?"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
